@@ -1,6 +1,6 @@
 import React from "react";
 import { useLanguage } from "../../../contexts/LanguageContext";
-
+import who_we_are from '../../../assets/Image/who_we_are.jpg'
 function WhoWeAre() {
   const { langValue } = useLanguage();
   return (
@@ -39,7 +39,7 @@ function WhoWeAre() {
                 <img
                   alt="Who We Are"
                   className="w-full h-full object-cover"
-                  src="https://readdy.ai/api/search-image?query=Modern%20professional%20team%20working%20with%20streaming%20technology%20and%20digital%20interfaces%20in%20sleek%20contemporary%20office%20environment%20with%20blue%20cyan%20accent%20lighting%20showing%20innovation%20and%20collaboration%20clean%20minimalist%20aesthetic%20representing%20technology%20company%20culture&width=800&height=600&seq=who-we-are-001&orientation=landscape"
+                  src={who_we_are}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e1a] via-transparent to-transparent"></div>
               </div>
