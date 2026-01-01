@@ -53,9 +53,11 @@ export default function LoginForm({
                     id="macAddress"
                     value={macAddress}
                     onChange={(e) => {
-                      let input = e.target.value.replace(/[^a-zA-Z0-9]/g, "");
+                      let input = e.target.value
+                        .replace(/[^a-fA-F0-9]/g, "")
+                        .slice(0, 12); // max 12 hex digits
                       const formatted = input.match(/.{1,2}/g)?.join(":") || "";
-                      setMacAddress(formatted);
+                      setMacAddress(formatted.toLowerCase());
                     }}
                     placeholder={langValue["macAddressPlaceholder"]}
                     className="w-full bg-white/5 border border-white/20 rounded-xl px-12 py-4 text-white placeholder-white/40 focus:outline-none focus:border-[#1CF1FF] transition-colors text-lg"
