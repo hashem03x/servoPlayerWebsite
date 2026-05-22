@@ -285,6 +285,7 @@ export const Lang = {
     contactMessage: "Message",
     contactMessagePlaceholder: "Your message...",
     contactSendMessage: "Send Message",
+<<<<<<< HEAD
     // Privacy Policy translations
     privacyPolicyTitle: "Privacy Policy",
     privacyPolicyLastUpdated: "Last Updated: May 2025",
@@ -301,6 +302,8 @@ export const Lang = {
       "Refunds are not applicable once the digital service, subscription, or access has been successfully delivered and activated and used.",
     refundContactText:
       "For refund requests or support inquiries, please contact us.",
+=======
+>>>>>>> 7c0ecc0d3d9d70a51e9b6c653a7848bfce157568
   },
   ar: {
     FEELTHEFLOW: "أشعُر بالحركة",
@@ -572,6 +575,7 @@ export const Lang = {
     contactMessage: "الرسالة",
     contactMessagePlaceholder: "رسالتك...",
     contactSendMessage: "إرسال الرسالة",
+<<<<<<< HEAD
     // Privacy Policy translations
     privacyPolicyTitle: "سياسة الخصوصية",
     privacyPolicyLastUpdated: "آخر تحديث: مايو 2025",
@@ -588,6 +592,8 @@ export const Lang = {
       "لا يمكن استرداد المبلغ بعد تفعيل الخدمة الرقمية أو الاشتراك أو منح صلاحية الوصول واستخدام الخدمة بشكل فعلي.",
     refundContactText:
       "لطلبات الاسترجاع أو أي استفسارات متعلقة بالدعم، يرجى التواصل معنا.",
+=======
+>>>>>>> 7c0ecc0d3d9d70a51e9b6c653a7848bfce157568
   },
   es: {
     FEELTHEFLOW: "SIENTE EL FLUJO",
@@ -872,6 +878,7 @@ export const Lang = {
     contactMessage: "Mensaje",
     contactMessagePlaceholder: "Tu mensaje...",
     contactSendMessage: "Enviar mensaje",
+<<<<<<< HEAD
     // Privacy Policy translations
     privacyPolicyTitle: "Política de privacidad",
     privacyPolicyLastUpdated: "Última actualización: mayo de 2025",
@@ -888,6 +895,8 @@ export const Lang = {
       "Los reembolsos no son aplicables una vez que el servicio digital, la suscripción o el acceso han sido entregados, activados y utilizados con éxito.",
     refundContactText:
       "Para solicitudes de reembolso o consultas de soporte, contáctenos.",
+=======
+>>>>>>> 7c0ecc0d3d9d70a51e9b6c653a7848bfce157568
   },
   pt: {
     FEELTHEFLOW: "SINTA O FLUXO",
@@ -1169,6 +1178,7 @@ export const Lang = {
     contactMessage: "Mensagem",
     contactMessagePlaceholder: "Sua mensagem...",
     contactSendMessage: "Enviar mensagem",
+<<<<<<< HEAD
     // Privacy Policy translations
     privacyPolicyTitle: "Política de Privacidade",
     privacyPolicyLastUpdated: "Última atualização: maio de 2025",
@@ -1185,5 +1195,7 @@ export const Lang = {
       "Os reembolsos não são aplicáveis após a entrega, ativação e uso bem-sucedidos do serviço digital, assinatura ou acesso.",
     refundContactText:
       "Para solicitações de reembolso ou consultas de suporte, entre em contato conosco.",
+=======
+>>>>>>> 7c0ecc0d3d9d70a51e9b6c653a7848bfce157568
   },
 };

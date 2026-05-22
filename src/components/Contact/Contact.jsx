@@ -36,7 +36,11 @@ export default function Contact() {
                         {langValue["contactEmail"]}
                       </div>
                       <div className="text-white font-semibold">
+<<<<<<< HEAD
                         servoo.tv@gmail.com
+=======
+                        support@servo.com
+>>>>>>> 7c0ecc0d3d9d70a51e9b6c653a7848bfce157568
                       </div>
                     </div>
                   </div>

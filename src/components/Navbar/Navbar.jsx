@@ -217,6 +217,39 @@ export default function Navbar() {
             </li>
             <li>
               <ScrollLink
+<<<<<<< HEAD
+=======
+                to="who-we-are"
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={() => {
+                  handleScrollOrRoute("who-we-are");
+                  setIsMenuOpen(false);
+                }}
+                className="text-white cursor-pointer"
+              >
+                {langValue["WhoWeAre"]}
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+                to="vision"
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={() => {
+                  handleScrollOrRoute("vision");
+                  setIsMenuOpen(false);
+                }}
+                className="text-white cursor-pointer"
+              >
+                {langValue["vision"]}
+              </ScrollLink>
+            </li>
+            <li>
+              <ScrollLink
+>>>>>>> 7c0ecc0d3d9d70a51e9b6c653a7848bfce157568
                 to="features"
                 smooth={true}
                 offset={-70}
