@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/Image/logo_with_text.png";
-<<<<<<< HEAD
 import { Link as RouterLink } from "react-router-dom";
-=======
->>>>>>> 7c0ecc0d3d9d70a51e9b6c653a7848bfce157568
 import { useLanguage } from "../../contexts/LanguageContext";
 
 export default function Footer() {
@@ -103,21 +100,12 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4">{langValue["legal"]}</h4>
             <ul className="space-y-2">
               <li>
-<<<<<<< HEAD
                 <RouterLink
                   to="/privacyPolicy"
                   className="text-white/60 hover:text-[#1CF1FF] transition-colors text-sm cursor-pointer"
                 >
                   {langValue["privacyPolicy"]}
                 </RouterLink>
-=======
-                <a
-                  href="#"
-                  className="text-white/60 hover:text-[#1CF1FF] transition-colors text-sm cursor-pointer"
-                >
-                  {langValue["privacyPolicy"]}
-                </a>
->>>>>>> 7c0ecc0d3d9d70a51e9b6c653a7848bfce157568
               </li>
               <li>
                 <a
