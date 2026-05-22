@@ -1,0 +1,230 @@
+.pageWrapper {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0a0e1a, #0f1420, #0a0e1a);
+  padding-top: 90px;
+  padding-bottom: 60px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(28, 241, 255, 0.1);
+  border: 1px solid rgba(28, 241, 255, 0.25);
+  color: #1CF1FF;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.lastUpdated {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 28px;
+}
+
+.divider {
+  width: 64px;
+  height: 3px;
+  background: linear-gradient(to right, #1CF1FF, transparent);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+[dir="rtl"] .divider {
+  background: linear-gradient(to left, #1CF1FF, transparent);
+}
+
+/* ── Card ── */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(28, 241, 255, 0.2);
+}
+
+/* ── Card Header ── */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cardIcon {
+  width: 44px;
+  height: 44px;
+  background: rgba(28, 241, 255, 0.1);
+  border: 1px solid rgba(28, 241, 255, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1CF1FF;
+  flex-shrink: 0;
+}
+
+.cardIconGold {
+  background: rgba(216, 165, 41, 0.1);
+  border-color: rgba(216, 165, 41, 0.25);
+  color: #D8A529;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ── Contact Grid ── */
+.contactGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+[dir="rtl"] .contactRow {
+  flex-direction: row;
+}
+
+.contactLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  min-width: 130px;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.contactValue {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contactLink {
+  color: #1CF1FF;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.15s, opacity 0.15s;
+}
+
+.contactLink:hover {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* ── Policy Content ── */
+.policyContent {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.policyText {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.highlightBox {
+  background: rgba(28, 241, 255, 0.05);
+  border-left: 3px solid #1CF1FF;
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+}
+
+[dir="rtl"] .highlightBox {
+  border-left: none;
+  border-right: 3px solid #1CF1FF;
+  border-radius: 8px 0 0 8px;
+}
+
+.warningBox {
+  background: rgba(216, 165, 41, 0.07);
+  border: 1px solid rgba(216, 165, 41, 0.2);
+  border-radius: 10px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.warningIcon {
+  color: #D8A529;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.warningText {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contactCta {
+  color: rgba(255, 255, 255, 0.55);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 22px 18px;
+  }
+
+  .contactRow {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .contactLabel {
+    min-width: unset;
+  }
+}

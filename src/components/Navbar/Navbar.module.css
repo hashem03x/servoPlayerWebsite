@@ -1,0 +1,10 @@
+.header_links li {
+  border-bottom: 1px solid grey;
+  padding-bottom: 8px;
+}
+@media (min-width: 767px) {
+  .header_links li {
+    border-bottom: none;
+    padding-bottom: none;   
+  }
+}
