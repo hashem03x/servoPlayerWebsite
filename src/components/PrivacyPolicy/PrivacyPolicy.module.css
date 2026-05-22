@@ -1,74 +1,93 @@
 .pageWrapper {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #0a0e1a, #0f1420, #0a0e1a);
-  padding-top: 90px;
-  padding-bottom: 60px;
+  background: #0a0e1a;
+  padding-bottom: 80px;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ── Header ── */
-.header {
+/* ── Hero ── */
+.hero {
+  position: relative;
+  padding: 120px 24px 64px;
   text-align: center;
-  margin-bottom: 48px;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 102, 204, 0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 20%, rgba(28, 241, 255, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .badge {
   display: inline-block;
   background: rgba(28, 241, 255, 0.1);
-  border: 1px solid rgba(28, 241, 255, 0.25);
+  border: 1px solid rgba(28, 241, 255, 0.3);
   color: #1cf1ff;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 4px 14px;
+  padding: 5px 16px;
   border-radius: 999px;
-  margin-bottom: 20px;
 }
 
-.title {
-  font-size: 2.4rem;
+.heroTitle {
+  font-size: 3rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 10px;
-  line-height: 1.2;
+  line-height: 1.15;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff 40%, rgba(28, 241, 255, 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.lastUpdated {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 28px;
+.heroSub {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+  letter-spacing: 0.03em;
 }
 
-.divider {
-  width: 64px;
-  height: 3px;
-  background: linear-gradient(to right, #1cf1ff, transparent);
+/* ── Container ── */
+.container {
+  max-width: 760px;
   margin: 0 auto;
-  border-radius: 2px;
-}
-
-[dir="rtl"] .divider {
-  background: linear-gradient(to left, #1cf1ff, transparent);
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* ── Card ── */
 .card {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  padding: 32px;
-  margin-bottom: 24px;
-  transition: border-color 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 36px;
+  transition: border-color 0.25s, box-shadow 0.25s;
 }
 
 .card:hover {
   border-color: rgba(28, 241, 255, 0.2);
+  box-shadow: 0 0 40px rgba(28, 241, 255, 0.04);
+}
+
+.cardGold:hover {
+  border-color: rgba(216, 165, 41, 0.25);
+  box-shadow: 0 0 40px rgba(216, 165, 41, 0.04);
 }
 
 /* ── Card Header ── */
@@ -82,9 +101,9 @@
 }
 
 .cardIcon {
-  width: 44px;
-  height: 44px;
-  background: rgba(28, 241, 255, 0.1);
+  width: 42px;
+  height: 42px;
+  background: rgba(28, 241, 255, 0.08);
   border: 1px solid rgba(28, 241, 255, 0.2);
   border-radius: 10px;
   display: flex;
@@ -95,13 +114,13 @@
 }
 
 .cardIconGold {
-  background: rgba(216, 165, 41, 0.1);
+  background: rgba(216, 165, 41, 0.08);
   border-color: rgba(216, 165, 41, 0.25);
   color: #d8a529;
 }
 
 .cardTitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -111,117 +130,158 @@
 .contactGrid {
   display: flex;
   flex-direction: column;
-  gap: 18px;
 }
 
-.contactRow {
+.contactItem {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 16px;
+  padding: 14px 0;
 }
 
-[dir="rtl"] .contactRow {
-  flex-direction: row;
+.contactDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .contactLabel {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.45);
-  min-width: 130px;
-  padding-top: 2px;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  min-width: 120px;
+  padding-top: 3px;
   flex-shrink: 0;
 }
 
 .contactValue {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.contactLinks {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.85);
 }
 
 .contactLink {
   color: #1cf1ff;
   text-decoration: none;
   font-size: 0.95rem;
-  transition:
-    color 0.15s,
-    opacity 0.15s;
+  transition: opacity 0.15s;
 }
 
 .contactLink:hover {
-  color: #ffffff;
-  opacity: 0.9;
+  opacity: 0.75;
 }
 
-/* ── Policy Content ── */
-.policyContent {
+/* ── Policy Intro ── */
+.policyIntro {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.75;
+  margin: 0 0 28px;
+}
+
+/* ── Steps ── */
+.steps {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  margin-bottom: 28px;
 }
 
-.policyText {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.75;
-  margin: 0;
-}
-
-.highlightBox {
-  background: rgba(28, 241, 255, 0.05);
-  border-left: 3px solid #1cf1ff;
-  border-radius: 0 8px 8px 0;
-  padding: 16px 20px;
-}
-
-[dir="rtl"] .highlightBox {
-  border-left: none;
-  border-right: 3px solid #1cf1ff;
-  border-radius: 8px 0 0 8px;
-}
-
-.warningBox {
-  background: rgba(216, 165, 41, 0.07);
-  border: 1px solid rgba(216, 165, 41, 0.2);
-  border-radius: 10px;
-  padding: 16px 20px;
+.step {
   display: flex;
+  gap: 18px;
   align-items: flex-start;
-  gap: 12px;
 }
 
-.warningIcon {
-  color: #d8a529;
+.stepConnector {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-left: 19px;
+}
+
+.stepNumber {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(28, 241, 255, 0.1);
+  border: 1px solid rgba(28, 241, 255, 0.3);
+  color: #1cf1ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
-.warningText {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
+.stepNumberWarn {
+  background: rgba(216, 165, 41, 0.1);
+  border-color: rgba(216, 165, 41, 0.3);
+  color: #d8a529;
+}
+
+.stepBody {
+  padding-top: 4px;
+  padding-bottom: 8px;
+}
+
+.stepTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 6px;
+}
+
+.stepText {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.7;
   margin: 0;
 }
 
-.contactCta {
-  color: rgba(255, 255, 255, 0.55);
-  font-style: italic;
-  font-size: 0.9rem;
+/* ── CTA ── */
+.ctaRow {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.25), rgba(28, 241, 255, 0.15));
+  border: 1px solid rgba(28, 241, 255, 0.25);
+  color: #1cf1ff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.4), rgba(28, 241, 255, 0.25));
+  border-color: rgba(28, 241, 255, 0.5);
 }
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
-  .title {
-    font-size: 1.8rem;
+  .heroTitle {
+    font-size: 2rem;
   }
 
   .card {
-    padding: 22px 18px;
+    padding: 24px 18px;
   }
 
-  .contactRow {
+  .contactItem {
     flex-direction: column;
     gap: 4px;
   }
