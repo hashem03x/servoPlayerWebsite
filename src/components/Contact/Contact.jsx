@@ -41,6 +41,20 @@ export default function Contact() {
                     </div>
                   </div>
 
+                  {/* Phone */}
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-[#0066CC] to-[#1CF1FF] flex items-center justify-center">
+                      <i className="ri-phone-line text-2xl text-white"></i>
+                    </div>
+                    <div>
+                      <div className="text-white/60 text-sm mb-1">
+                        {langValue["phoneLabel"] || "Phone"}
+                      </div>
+                      <a href="tel:+971547174492" className="block text-white font-semibold hover:text-[#1CF1FF] transition-colors">+971 547 174 492</a>
+                      <a href="tel:+201224906650" className="block text-white font-semibold hover:text-[#1CF1FF] transition-colors">+201 224 906 650</a>
+                    </div>
+                  </div>
+
                   {/* Support */}
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-[#0066CC] to-[#1CF1FF] flex items-center justify-center">
