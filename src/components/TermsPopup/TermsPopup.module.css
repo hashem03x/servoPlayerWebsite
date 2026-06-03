@@ -1,0 +1,22 @@
+
+
+.popup::-webkit-scrollbar {
+  width: 6px;
+}
+
+.popup::-webkit-scrollbar-track {
+  background: #0a0e1a;
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    #0066cc,
+    #1cf1ff
+  );
+  border-radius: 20px;
+}
+
+.popup::-webkit-scrollbar-thumb:hover {
+  background: #1cf1ff;
+}

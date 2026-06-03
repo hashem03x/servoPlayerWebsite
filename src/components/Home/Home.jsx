@@ -18,6 +18,7 @@ import { Lang } from "../../lang.jsx";
 export default function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoader, setIsLoader] = useState(true);
+  const [showNotice, setShowNotice] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
   const query = new URLSearchParams(location.search);
@@ -94,18 +95,17 @@ export default function Home() {
                   {langValue["FEELTHEFLOW"]}
                 </h1>
                 <div
-                  className={`container h-full ${
-                    isLoggedIn
-                      ? `text-center lg:mt-44 ${classes.wish_responive}`
-                      : ""
-                  }`}
+                  className={`container h-full ${isLoggedIn
+                    ? `text-center lg:mt-44 ${classes.wish_responive}`
+                    : ""
+                    }`}
                 >
                   <div className={`${classes.parent_title}`}>
-                    <h1
+                    {/* <h1
                       className={`text-xl md:text-2xl text-white/90 mb-4 font-light`}
                     >
                       {langValue["heroSubTitle"]}
-                    </h1>
+                    </h1> */}
                     <p
                       ref={textRef}
                       className="text-xl md:text-2xl text-white/90 mb-4 font-light"
@@ -129,8 +129,57 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+             
               </div>
             </div>
+              {showNotice && (
+  <div
+    className="
+      absolute
+      bottom-4 md:bottom-8
+      right-2 md:right-6 lg:right-10
+      z-20
+      w-[95%]
+      sm:w-[90%]
+      md:w-[80%]
+      lg:w-3/4
+      max-w-5xl
+    "
+  >
+    <div className="relative overflow-hidden rounded-[20px] bg-gradient-to-b from-[#0066cc]/60 via-[#1cf1ff]/80 to-[#0066cc] text-white p-4 sm:p-6 md:p-8 lg:p-10">
+
+      <button
+        onClick={() => setShowNotice(false)}
+        className="
+          absolute
+          top-3 right-3
+          md:top-4 md:right-4
+          w-8 h-8 md:w-10 md:h-10
+          flex items-center justify-center
+          rounded-full
+          text-2xl md:text-3xl
+          text-white
+          hover:bg-white/10
+          transition
+        "
+      >
+        ×
+      </button>
+
+      <p className="pr-10 md:pr-14 text-sm sm:text-base md:text-lg lg:text-[20px] leading-relaxed font-medium">
+        <span className="font-bold">SERVO PLAYER</span> does not provide,
+        sell, or distribute any content, channels, playlists, or
+        subscriptions. SERVO Player is a media player application only and
+        does not include any preloaded content. Users must obtain and manage
+        their content from authorized sources. SERVO Player is not
+        responsible for the content accessed or used within the application.
+        A valid license is required after the trial period. All purchases
+        are final and non-refundable.
+      </p>
+
+    </div>
+  </div>
+)}
             <FloatingWhatsApp
               phoneNumber="+1234567890" // Replace with your WhatsApp number
               accountName={langValue["whatsappAccountName"]} // Customize with your name or business name
@@ -142,7 +191,9 @@ export default function Home() {
               className="text-black w-[18rem]"
               placeholder={langValue["whatsappPlaceholder"]}
             />
+
           </section>
+
 
           <WhoWeAre />
           <Vision />
